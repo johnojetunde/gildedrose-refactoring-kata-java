@@ -2,7 +2,9 @@ package com.gildedrose.processor;
 
 import com.gildedrose.model.Item;
 import com.gildedrose.service.ItemQualityConstraint;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ConjuredItemProcessor implements ItemProcessor {
 
     @Override
@@ -15,5 +17,9 @@ public class ConjuredItemProcessor implements ItemProcessor {
 
     }
 
+    @Override
+    public Type getType() {
+        return Type.Conjured;
+    }
 
 }
