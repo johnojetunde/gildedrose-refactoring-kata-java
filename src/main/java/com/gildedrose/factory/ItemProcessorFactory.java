@@ -1,22 +1,11 @@
-package com.gildedrose;
+package com.gildedrose.factory;
 
+import com.gildedrose.model.Item;
 import com.gildedrose.processor.*;
 
-class GildedRose {
-    Item[] items;
+public class ItemProcessorFactory {
 
-    GildedRose(Item[] items) {
-        this.items = items;
-    }
-
-
-    void updateQuality() {
-        for (Item item : items) {
-            getProcessor(item).updateQuality(item);
-        }
-    }
-
-    private ItemProcessor getProcessor(Item item) {
+    public ItemProcessor getProcessor(Item item) {
         if (item.name.contains("Backstage passes")) {
             return new BackstagePassesItemProcessor();
         } else if (item.name.contains("Aged Brie")) {

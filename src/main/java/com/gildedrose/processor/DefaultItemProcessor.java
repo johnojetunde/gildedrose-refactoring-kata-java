@@ -1,7 +1,7 @@
 package com.gildedrose.processor;
 
-import com.gildedrose.Item;
-import com.gildedrose.ItemQualityConstraint;
+import com.gildedrose.model.Item;
+import com.gildedrose.service.ItemQualityConstraint;
 
 public class DefaultItemProcessor implements ItemProcessor {
 

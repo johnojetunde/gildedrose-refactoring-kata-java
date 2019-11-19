@@ -1,6 +1,6 @@
 package com.gildedrose.processor;
 
-import com.gildedrose.Item;
+import com.gildedrose.model.Item;
 
 public class SulfurasItemProcessor implements ItemProcessor {
 
