@@ -1,6 +1,6 @@
-package com.gildedrose.processor;
+package com.gildedrose.domain.processor;
 
-import com.gildedrose.model.Item;
+import com.gildedrose.domain.model.Item;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -27,8 +27,8 @@ public class AgedBrieItemProcessorTest {
 
         processor.updateQuality(item);
 
-        assertEquals(14,item.sellIn);
-        assertEquals(8,item.quality);
+        assertEquals(14, item.sellIn);
+        assertEquals(8, item.quality);
     }
 
     @Test
@@ -37,8 +37,8 @@ public class AgedBrieItemProcessorTest {
 
         processor.updateQuality(item);
 
-        assertEquals(14,item.sellIn);
-        assertEquals(50,item.quality);
+        assertEquals(14, item.sellIn);
+        assertEquals(50, item.quality);
     }
 
 }

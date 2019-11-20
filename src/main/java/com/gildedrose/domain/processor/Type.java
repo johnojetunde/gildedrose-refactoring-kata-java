@@ -1,4 +1,4 @@
-package com.gildedrose.processor;
+package com.gildedrose.domain.processor;
 
 public enum Type {
     Backstage_Passes,

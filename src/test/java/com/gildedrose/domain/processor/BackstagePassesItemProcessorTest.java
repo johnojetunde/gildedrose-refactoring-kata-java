@@ -1,6 +1,6 @@
-package com.gildedrose.processor;
+package com.gildedrose.domain.processor;
 
-import com.gildedrose.model.Item;
+import com.gildedrose.domain.model.Item;
 import org.junit.Before;
 import org.junit.Test;
 

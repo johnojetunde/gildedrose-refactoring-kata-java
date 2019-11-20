@@ -1,6 +1,6 @@
-package com.gildedrose.service;
+package com.gildedrose.domain.service;
 
-import com.gildedrose.model.Item;
+import com.gildedrose.domain.model.Item;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

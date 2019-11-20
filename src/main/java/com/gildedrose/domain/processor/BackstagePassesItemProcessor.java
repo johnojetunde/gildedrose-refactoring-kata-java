@@ -1,7 +1,7 @@
-package com.gildedrose.processor;
+package com.gildedrose.domain.processor;
 
-import com.gildedrose.model.Item;
-import com.gildedrose.service.ItemQualityConstraint;
+import com.gildedrose.domain.model.Item;
+import com.gildedrose.domain.service.ItemQualityConstraint;
 import org.springframework.stereotype.Service;
 
 @Service

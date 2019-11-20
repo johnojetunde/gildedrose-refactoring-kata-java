@@ -1,7 +1,7 @@
-package com.gildedrose.service;
+package com.gildedrose.domain.service;
 
-import com.gildedrose.factory.ItemProcessorFactory;
-import com.gildedrose.model.Item;
+import com.gildedrose.domain.factory.ItemProcessorFactory;
+import com.gildedrose.domain.model.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

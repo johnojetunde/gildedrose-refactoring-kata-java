@@ -1,4 +1,4 @@
-package com.gildedrose.service;
+package com.gildedrose.domain.service;
 
 public class ItemQualityConstraint {
     private ItemQualityConstraint() {

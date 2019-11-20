@@ -1,8 +1,8 @@
-package com.gildedrose.factory;
+package com.gildedrose.domain.factory;
 
-import com.gildedrose.model.Item;
-import com.gildedrose.processor.ItemProcessor;
-import com.gildedrose.processor.Type;
+import com.gildedrose.domain.model.Item;
+import com.gildedrose.domain.processor.ItemProcessor;
+import com.gildedrose.domain.processor.Type;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
