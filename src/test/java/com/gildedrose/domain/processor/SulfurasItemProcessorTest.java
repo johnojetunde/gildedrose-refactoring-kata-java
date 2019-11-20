@@ -15,6 +15,12 @@ public class SulfurasItemProcessorTest {
         processor = new SulfurasItemProcessor();
     }
 
+
+    @Test
+    public void processor_type_should_be_sulfuras() {
+        assertEquals(Type.Sulfuras, processor.getType());
+    }
+
     @Test
     public void quality_and_sellin_should_be_constant() {
         Item item = new Item("Sulfuras, Hand of Ragnaros", 15, 80);

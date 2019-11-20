@@ -16,6 +16,11 @@ public class DefaultItemProcessorTest {
     }
 
     @Test
+    public void processor_type_should_be_default() {
+        assertEquals(Type.Default, processor.getType());
+    }
+
+    @Test
     public void quality_and_sellin_should_decrease_by_1_when_sellin_is_greater_than_1() {
         Item item = new Item("Default Product", 2, 50);
 
