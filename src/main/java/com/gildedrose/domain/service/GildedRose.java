@@ -5,6 +5,8 @@ import com.gildedrose.domain.model.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class GildedRose {
@@ -16,9 +18,10 @@ public class GildedRose {
         this.factory = factory;
     }
 
-    public void updateQuality(Item[] items) {
+    public List<Item> updateQuality(List<Item> items) {
         for (Item item : items) {
             factory.getProcessor(item).updateQuality(item);
         }
+        return items;
     }
 }

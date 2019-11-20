@@ -7,8 +7,7 @@ import org.springframework.stereotype.Service;
 public class SulfurasItemProcessor implements ItemProcessor {
 
     @Override
-    public Item updateQuality(Item item) {
-        return item;
+    public void updateQuality(Item item) {
     }
 
     @Override

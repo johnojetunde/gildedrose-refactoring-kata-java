@@ -8,14 +8,12 @@ import org.springframework.stereotype.Service;
 public class AgedBrieItemProcessor implements ItemProcessor {
 
     @Override
-    public Item updateQuality(Item item) {
+    public void updateQuality(Item item) {
         item.sellIn -= 1;
 
         int incr = 1;
 
         item.quality = ItemQualityConstraint.ensureRange(item.quality + incr, 0, 50);
-
-        return item;
     }
 
     @Override

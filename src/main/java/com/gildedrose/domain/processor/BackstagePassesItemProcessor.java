@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public class BackstagePassesItemProcessor implements ItemProcessor {
 
     @Override
-    public Item updateQuality(Item item) {
+    public void updateQuality(Item item) {
         item.sellIn -= 1;
 
         int incr = 1;
@@ -21,8 +21,6 @@ public class BackstagePassesItemProcessor implements ItemProcessor {
         }
 
         item.quality = ItemQualityConstraint.ensureRange(item.quality + incr, 0, 50);
-
-        return item;
     }
 
     @Override
