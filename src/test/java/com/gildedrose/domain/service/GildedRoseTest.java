@@ -1,34 +1,32 @@
 package com.gildedrose.domain.service;
 
 import com.gildedrose.domain.model.Item;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-@RunWith(SpringRunner.class)
+
 @SpringBootTest
-public class GildedRoseTest {
+class GildedRoseTest {
 
     @Autowired
     private GildedRose app;
 
     private List<Item> items;
 
-    @Before
-    public void setUp() {
+    @BeforeEach
+    void setUp() {
         items = items();
     }
 
     @Test
-    public void update_quality() {
+    void update_quality() {
         app.updateQuality(items);
 
         assertEquals("+5 Dexterity Vest, 9, 19", items.get(0).toString());

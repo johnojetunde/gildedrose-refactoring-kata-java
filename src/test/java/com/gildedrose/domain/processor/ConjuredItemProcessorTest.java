@@ -1,28 +1,28 @@
 package com.gildedrose.domain.processor;
 
 import com.gildedrose.domain.model.Item;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ConjuredItemProcessorTest {
+class ConjuredItemProcessorTest {
 
     private ConjuredItemProcessor processor;
 
-    @Before
-    public void setUp() {
+    @BeforeEach
+    void setUp() {
         processor = new ConjuredItemProcessor();
     }
 
 
     @Test
-    public void processor_type_should_be_conjured() {
+    void processor_type_should_be_conjured() {
         assertEquals(Type.Conjured, processor.getType());
     }
 
     @Test
-    public void quality_should_reduce_by_2_when_item_is_Conjured() {
+    void quality_should_reduce_by_2_when_item_is_Conjured() {
         Item item = new Item("Conjured Mana Cake", 15, 30);
 
         processor.updateQuality(item);
@@ -33,7 +33,7 @@ public class ConjuredItemProcessorTest {
 
 
     @Test
-    public void quality_should_not_go_lower_than_0() {
+    void quality_should_not_go_lower_than_0() {
         Item item = new Item("Conjured Mana Cake", 13, 0);
 
         processor.updateQuality(item);

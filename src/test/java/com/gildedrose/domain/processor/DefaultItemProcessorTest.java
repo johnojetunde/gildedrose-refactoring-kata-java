@@ -1,27 +1,27 @@
 package com.gildedrose.domain.processor;
 
 import com.gildedrose.domain.model.Item;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DefaultItemProcessorTest {
+class DefaultItemProcessorTest {
 
     private DefaultItemProcessor processor;
 
-    @Before
-    public void setUp() {
+    @BeforeEach
+    void setUp() {
         processor = new DefaultItemProcessor();
     }
 
     @Test
-    public void processor_type_should_be_default() {
+    void processor_type_should_be_default() {
         assertEquals(Type.Default, processor.getType());
     }
 
     @Test
-    public void quality_and_sellin_should_decrease_by_1_when_sellin_is_greater_than_1() {
+    void quality_and_sellin_should_decrease_by_1_when_sellin_is_greater_than_1() {
         Item item = new Item("Default Product", 2, 50);
 
         processor.updateQuality(item);
@@ -31,7 +31,7 @@ public class DefaultItemProcessorTest {
     }
 
     @Test
-    public void quality_should_decrease_by_2_and_sellin_by_1_when_sellin_is_less_than_0() {
+    void quality_should_decrease_by_2_and_sellin_by_1_when_sellin_is_less_than_0() {
         Item item = new Item("Default Product", -1, 50);
 
         processor.updateQuality(item);
@@ -41,7 +41,7 @@ public class DefaultItemProcessorTest {
     }
 
     @Test
-    public void quality_should_not_go_lower_than_0() {
+    void quality_should_not_go_lower_than_0() {
         Item item = new Item("Default Product", 13, 0);
 
         processor.updateQuality(item);

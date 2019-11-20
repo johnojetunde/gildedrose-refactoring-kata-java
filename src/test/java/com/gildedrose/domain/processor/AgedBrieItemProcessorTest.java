@@ -1,28 +1,28 @@
 package com.gildedrose.domain.processor;
 
 import com.gildedrose.domain.model.Item;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class AgedBrieItemProcessorTest {
+class AgedBrieItemProcessorTest {
 
     private AgedBrieItemProcessor processor;
 
-    @Before
-    public void setUp() {
+    @BeforeEach
+    void setUp() {
         processor = new AgedBrieItemProcessor();
     }
 
     @Test
-    public void processor_type_should_be_aged_brie() {
+    void processor_type_should_be_aged_brie() {
         assertEquals(Type.Aged_Brie, processor.getType());
     }
 
     @Test
-    public void quality_should_increase_and_sellin_decrease() {
+    void quality_should_increase_and_sellin_decrease() {
         Item item = new Item("Aged Brie", 15, 7);
 
         processor.updateQuality(item);
@@ -32,7 +32,7 @@ public class AgedBrieItemProcessorTest {
     }
 
     @Test
-    public void quality_should_not_go_higher_than_50() {
+    void quality_should_not_go_higher_than_50() {
         Item item = new Item("Aged Brie", 15, 50);
 
         processor.updateQuality(item);
