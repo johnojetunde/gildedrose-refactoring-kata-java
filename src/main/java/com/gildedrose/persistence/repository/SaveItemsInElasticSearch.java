@@ -20,6 +20,7 @@ public class SaveItemsInElasticSearch implements SaveItems {
 
     private final RestHighLevelClient client;
 
+
     @Autowired
     public SaveItemsInElasticSearch(RestHighLevelClient client) {
         this.client = client;
@@ -32,8 +33,8 @@ public class SaveItemsInElasticSearch implements SaveItems {
             BulkRequest request = new BulkRequest();
 
             item.forEach(s -> request.add(
-                            new UpdateRequest("items", s.getId())
-                                    .doc(toMap(s))));
+                    new UpdateRequest("items", s.getId())
+                            .doc(toMap(s))));
 
 
             BulkResponse response = client.bulk(request, RequestOptions.DEFAULT);

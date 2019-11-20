@@ -22,11 +22,14 @@ public class ItemQualityUpdateJob implements Runnable {
 
     @Override
     public void run() {
+        log.info("------------------ Item Quality Update Job started -----------------");
         try {
+
             qualityUpdate.update();
 
+            log.info("------------------ Item Quality Update Job completed successfully -----------------");
         } catch (ItemServiceException e) {
-            log.log(Level.SEVERE, "Error running ItemQualityUpdate", e);
+            log.log(Level.SEVERE, "Item Quality Update Job Failed -- Cause:", e);
         }
 
     }
