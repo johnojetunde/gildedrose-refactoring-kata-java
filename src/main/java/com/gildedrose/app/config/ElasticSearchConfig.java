@@ -25,5 +25,10 @@ public class ElasticSearchConfig {
         return new RestHighLevelClient(builder);
     }
 
+    @Bean("elastic.search.indices")
+    public String indices(){
+        return "items";
+    }
+
 
 }

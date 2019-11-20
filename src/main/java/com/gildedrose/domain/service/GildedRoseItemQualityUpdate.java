@@ -29,6 +29,8 @@ public class GildedRoseItemQualityUpdate implements ItemQualityUpdate {
                             retriever.retrieveItems()));
         } catch (ItemSaveException e) {
             throw new ItemServiceException("Unable to save updated items", e);
+        } catch (Exception e) {
+            throw new ItemServiceException("Error updating items quality", e);
         }
     }
 }
